@@ -16,8 +16,8 @@ header {
             top: 10px;
             right: 0;
             opacity: 0;
-            z-index: 10;/* Un z-index para que el checkbox esté por encima de cualquier elemento y se pueda seleccionar */
-            width: 30px; /* alto y ancho suficiente para que el usuario tenga margen de clickeo */
+            z-index: 10;
+            width: 30px; 
             height: 30px;
             &:checked ~ nav{ 
                 display: block;
@@ -27,9 +27,8 @@ header {
                 z-index: 4;
             }
             &:checked ~ #barras{
-                opacity: 0; /* escondo las barras */
+                opacity: 0; 
             }
-            /*Agregar la cruz usando el menu hamburguesa de la bitacora 9*/
         }
         i {
             position: absolute;
