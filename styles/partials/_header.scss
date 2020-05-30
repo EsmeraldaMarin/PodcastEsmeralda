@@ -1,0 +1,67 @@
+header {
+    #navegador{
+        position: relative;
+        min-height: 44px;
+        img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        #cruz {
+            position: absolute;
+            opacity: 0;
+        }
+        #checkbox {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            opacity: 0;
+            z-index: 10;/* Un z-index para que el checkbox esté por encima de cualquier elemento y se pueda seleccionar */
+            width: 30px; /* alto y ancho suficiente para que el usuario tenga margen de clickeo */
+            height: 30px;
+            &:checked ~ nav{ 
+                display: block;
+            }
+            &:checked ~ #cruz{
+                opacity: 1;
+                z-index: 4;
+            }
+            &:checked ~ #barras{
+                opacity: 0; /* escondo las barras */
+            }
+            /*Agregar la cruz usando el menu hamburguesa de la bitacora 9*/
+        }
+        i {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            transform: scale(1.2);
+        }
+        nav {
+            position: absolute;
+            top: 44px;
+            width: 100%;
+            display: none;
+            background-color: #0000ec;
+            li {
+                padding: 10px;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    &:hover{
+                        color: $button-color;
+                        text-decoration: line-through;
+                    }
+                    &:active{
+                        color: #444;
+                    }
+                }
+            }    
+        }
+        button{
+            display:block;
+            margin: 20px auto;
+            background-color: $button-color;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+header #navegador {
+  position: relative;
+  min-height: 44px; }
+  header #navegador img {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+  header #navegador #cruz {
+    position: absolute;
+    opacity: 0; }
+  header #navegador #checkbox {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    opacity: 0;
+    z-index: 10;
+    /* Un z-index para que el checkbox esté por encima de cualquier elemento y se pueda seleccionar */
+    width: 30px;
+    /* alto y ancho suficiente para que el usuario tenga margen de clickeo */
+    height: 30px;
+    /*Agregar la cruz usando el menu hamburguesa de la bitacora 9*/ }
+    header #navegador #checkbox:checked ~ nav {
+      display: block; }
+    header #navegador #checkbox:checked ~ #cruz {
+      opacity: 1;
+      z-index: 4; }
+    header #navegador #checkbox:checked ~ #barras {
+      opacity: 0;
+      /* escondo las barras */ }
+  header #navegador i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    transform: scale(1.2); }
+  header #navegador nav {
+    position: absolute;
+    top: 44px;
+    width: 100%;
+    display: none;
+    background-color: #0000ec; }
+    header #navegador nav li {
+      padding: 10px; }
+      header #navegador nav li a {
+        text-decoration: none;
+        color: #fff; }
+        header #navegador nav li a:hover {
+          color: #00F3BB;
+          text-decoration: line-through; }
+        header #navegador nav li a:active {
+          color: #444; }
+  header #navegador button {
+    display: block;
+    margin: 20px auto;
+    background-color: #00F3BB; }
+
+/*# sourceMappingURL=estilos.css.map */
