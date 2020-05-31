@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif; }
 
@@ -23,7 +24,8 @@ header #navegador {
     opacity: 0;
     z-index: 10;
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    cursor: pointer; }
     header #navegador #checkbox:checked ~ nav {
       display: block; }
     header #navegador #checkbox:checked ~ #cruz {
@@ -52,9 +54,31 @@ header #navegador {
           text-decoration: line-through; }
         header #navegador nav li a:active {
           color: #444; }
-  header #navegador button {
-    display: block;
-    margin: 20px auto;
-    background-color: #00F3BB; }
+header h1 {
+  margin-top: 30px;
+  font-weight: lighter; }
+  header h1 span:last-child {
+    text-decoration: line-through; }
+header h2 {
+  font-size: 2em;
+  font-weight: lighter; }
+  header h2::after {
+    content: ".";
+    color: #0000ec; }
+header p {
+  margin-top: 15px; }
+header .titulo {
+  margin-left: 15px; }
+header button {
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #00F3BB;
+  font-size: 1.3em;
+  font-weight: bold; }
+  header button:hover {
+    background-image: linear-gradient(to right, #00F3BB, #0000ec);
+    color: #fff; }
 
 /*# sourceMappingURL=estilos.css.map */

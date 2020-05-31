@@ -19,6 +19,7 @@ header {
             z-index: 10;
             width: 30px; 
             height: 30px;
+            cursor: pointer;
             &:checked ~ nav{ 
                 display: block;
             }
@@ -41,7 +42,7 @@ header {
             top: 44px;
             width: 100%;
             display: none;
-            background-color: #0000ec;
+            background-color: $bg-episodios-color;
             li {
                 padding: 10px;
                 a {
@@ -57,10 +58,39 @@ header {
                 }
             }    
         }
-        button{
-            display:block;
-            margin: 20px auto;
-            background-color: $button-color;
+    }
+    h1{
+        margin-top:30px ;
+        font-weight: lighter;
+        & span:last-child{
+            text-decoration: line-through;
+        }
+    }
+    h2{
+        font-size: 2em;
+        font-weight: lighter;
+        &::after{
+            content: ".";
+            color: $bg-episodios-color;
+        }
+    }
+    p{
+        margin-top:15px;
+    }
+    .titulo{
+        margin-left: 15px;
+    }
+    button{
+        display: block;
+        width: 80%;
+        height: 50px;
+        margin: 20px auto;
+        background-color:$button-color;
+        font-size: 1.3em;
+        font-weight: bold;
+        &:hover{
+            background-image: linear-gradient(to right, $button-color, $bg-episodios-color);;
+            color: #fff;
         }
     }
 }
