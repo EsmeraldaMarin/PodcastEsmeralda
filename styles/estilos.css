@@ -8,9 +8,12 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif; }
 
+html {
+  scroll-behavior: smooth; }
+
 button {
   display: block;
-  width: 80%;
+  width: 90%;
   height: 50px;
   margin: 20px auto;
   padding: 5px 10px;
@@ -61,7 +64,8 @@ header #navegador {
     display: none;
     background-color: #0000ec; }
     header #navegador nav li {
-      padding: 10px; }
+      margin: 20px 20px;
+      list-style-type: none; }
       header #navegador nav li a {
         text-decoration: none;
         color: #fff; }
@@ -91,18 +95,18 @@ header button {
 
 main #section-episodios {
   margin: 50px 0;
-  transform: skewY(-8deg);
+  transform: skewY(-6deg);
   background-color: #0000ec;
-  -webkit-transform: skewY(-8deg);
-  -moz-transform: skewY(-8deg);
-  -ms-transform: skewY(-8deg);
-  -o-transform: skewY(-8deg); }
+  -webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg); }
   main #section-episodios div {
-    transform: skewY(8deg);
-    -webkit-transform: skewY(8deg);
-    -moz-transform: skewY(8deg);
-    -ms-transform: skewY(8deg);
-    -o-transform: skewY(8deg); }
+    transform: skewY(6deg);
+    -webkit-transform: skewY(6deg);
+    -moz-transform: skewY(6deg);
+    -ms-transform: skewY(6deg);
+    -o-transform: skewY(6deg); }
     main #section-episodios div h2 {
       margin: 0px 0px 10px 10px;
       padding-top: 40px;
@@ -153,15 +157,54 @@ main #section-topicos article {
   justify-content: center;
   text-align: center; }
   main #section-topicos article div {
-    margin-bottom: 20px; }
+    margin: 15px 20px; }
     main #section-topicos article div h3 {
       font-size: 1.3em;
       font-family: "Lato", sans-serif; }
 
-main #section-novedades h2 {
-  margin: 64px 0px 10px 10px; }
-main #section-novedades button {
-  font-size: 1.1em;
-  margin-bottom: 64px; }
+main #section-novedades {
+  margin-top: 40px;
+  background-color: #0000ec;
+  transform: skewY(-6deg);
+  -webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg); }
+  main #section-novedades article {
+    padding: 5px;
+    text-align: center;
+    transform: skewY(6deg);
+    -webkit-transform: skewY(6deg);
+    -moz-transform: skewY(6deg);
+    -ms-transform: skewY(6deg);
+    -o-transform: skewY(6deg); }
+    main #section-novedades article h2 {
+      margin: 40px 0px 40px 10px;
+      color: #fff; }
+    main #section-novedades article button {
+      font-size: 1.1em;
+      margin-bottom: 64px; }
+
+footer {
+  margin-top: -25px;
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  footer span {
+    margin-top: 20px; }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    footer ul li {
+      list-style-type: none;
+      margin: 20px; }
+      footer ul li a {
+        text-decoration: none; }
+        footer ul li a i {
+          color: #000; }
 
 /*# sourceMappingURL=estilos.css.map */

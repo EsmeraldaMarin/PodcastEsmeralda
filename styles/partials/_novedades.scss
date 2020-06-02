@@ -1,11 +1,28 @@
 main {
     #section-novedades {
-        h2{
-            margin: 64px 0px 10px 10px;
-        }
-        button {
-            font-size: 1.1em;
-            margin-bottom: 64px ;
+        margin-top: 40px;
+        background-color: $bg-episodios-color;
+        transform: skewY(-6deg);
+        -webkit-transform: skewY(-6deg);
+        -moz-transform: skewY(-6deg);
+        -ms-transform: skewY(-6deg);
+        -o-transform: skewY(-6deg);
+        article {
+            padding: 5px;
+            text-align: center;
+            transform: skewY(6deg);
+            -webkit-transform: skewY(6deg);
+            -moz-transform: skewY(6deg);
+            -ms-transform: skewY(6deg);
+            -o-transform: skewY(6deg);
+            h2 {
+                margin: 40px 0px 40px 10px;
+                color: #fff;
+            }
+            button {
+                font-size: 1.1em;
+                margin-bottom: 64px;
+            }
         }
     }
 }
