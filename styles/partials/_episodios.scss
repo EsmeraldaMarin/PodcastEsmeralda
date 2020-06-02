@@ -1,23 +1,34 @@
-main{
-    #section-episodios{
+main {
+    #section-episodios {
+        margin: 50px 0;
+        transform: skewY(-8deg);
         background-color: $bg-episodios-color;
-        h2{
-
-            margin: 0px 0px 10px 10px;
-            padding-top: 10px;
-            font-size: 2em;
-            font-weight: lighter;
-            color: #fff;
-        }
-        article{
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            iframe{
-                margin: 10px;
+        -webkit-transform: skewY(-8deg);
+        -moz-transform: skewY(-8deg);
+        -ms-transform: skewY(-8deg);
+        -o-transform: skewY(-8deg);
+        div{
+            transform: skewY(8deg);
+            -webkit-transform: skewY(8deg);
+            -moz-transform: skewY(8deg);
+            -ms-transform: skewY(8deg);
+            -o-transform: skewY(8deg);
+            h2 {
+                margin: 0px 0px 10px 10px;
+                padding-top: 40px;
+                font-size: 2.3em;
+                font-weight: lighter;
+                color: #fff;
+            }
+            article {
+                display: flex;
+                padding-bottom: 70px;
+                flex-flow: row wrap;
+                justify-content: center;
+                iframe {
+                    margin: 10px;
+                }
             }
         }
-
     }
-
 }

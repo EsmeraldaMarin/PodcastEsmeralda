@@ -1,11 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap");
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif; }
+
+button {
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin: 20px auto;
+  padding: 5px 10px;
+  background-color: #00F3BB;
+  font-weight: bold; }
+  button:hover {
+    background-image: linear-gradient(to right, #00F3BB, #0000ec);
+    color: #fff; }
+
+h1, h2 {
+  font-family: "Poppins", sans-serif; }
 
 header #navegador {
   position: relative;
@@ -56,11 +72,12 @@ header #navegador {
           color: #444; }
 header h1 {
   margin-top: 30px;
-  font-weight: lighter; }
+  font-weight: lighter;
+  font-size: 2.3em; }
   header h1 span:last-child {
     text-decoration: line-through; }
 header h2 {
-  font-size: 2em;
+  font-size: 2.3em;
   font-weight: lighter; }
   header h2::after {
     content: ".";
@@ -70,30 +87,81 @@ header p {
 header .titulo {
   margin-left: 15px; }
 header button {
-  display: block;
-  width: 80%;
-  height: 50px;
-  margin: 20px auto;
-  background-color: #00F3BB;
-  font-size: 1.3em;
-  font-weight: bold; }
-  header button:hover {
-    background-image: linear-gradient(to right, #00F3BB, #0000ec);
-    color: #fff; }
+  font-size: 1.3em; }
 
 main #section-episodios {
-  background-color: #0000ec; }
-  main #section-episodios h2 {
-    margin: 0px 0px 10px 10px;
-    padding-top: 10px;
-    font-size: 2em;
-    font-weight: lighter;
-    color: #fff; }
-  main #section-episodios article {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center; }
-    main #section-episodios article iframe {
-      margin: 10px; }
+  margin: 50px 0;
+  transform: skewY(-8deg);
+  background-color: #0000ec;
+  -webkit-transform: skewY(-8deg);
+  -moz-transform: skewY(-8deg);
+  -ms-transform: skewY(-8deg);
+  -o-transform: skewY(-8deg); }
+  main #section-episodios div {
+    transform: skewY(8deg);
+    -webkit-transform: skewY(8deg);
+    -moz-transform: skewY(8deg);
+    -ms-transform: skewY(8deg);
+    -o-transform: skewY(8deg); }
+    main #section-episodios div h2 {
+      margin: 0px 0px 10px 10px;
+      padding-top: 40px;
+      font-size: 2.3em;
+      font-weight: lighter;
+      color: #fff; }
+    main #section-episodios div article {
+      display: flex;
+      padding-bottom: 70px;
+      flex-flow: row wrap;
+      justify-content: center; }
+      main #section-episodios div article iframe {
+        margin: 10px; }
+
+main #section-nosotros {
+  margin: 15px; }
+  main #section-nosotros #section-phone {
+    position: relative;
+    margin-top: -100px;
+    z-index: 100; }
+    main #section-nosotros #section-phone img {
+      width: 100%; }
+  main #section-nosotros h2 {
+    margin-bottom: 10px;
+    font-size: 2.3em;
+    font-weight: lighter; }
+  main #section-nosotros p {
+    margin-top: 10px; }
+
+main #section-entrevistas h2 {
+  margin-left: 15px;
+  font-size: 2.3em;
+  font-weight: lighter; }
+main #section-entrevistas div {
+  display: flex;
+  flex-flow: row wrap; }
+  main #section-entrevistas div img {
+    width: 100%;
+    margin-bottom: -1px; }
+
+main #section-topicos h2 {
+  margin: 20px 15px;
+  font-size: 2.3em;
+  font-weight: lighter; }
+main #section-topicos article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center; }
+  main #section-topicos article div {
+    margin-bottom: 20px; }
+    main #section-topicos article div h3 {
+      font-size: 1.3em;
+      font-family: "Lato", sans-serif; }
+
+main #section-novedades h2 {
+  margin: 64px 0px 10px 10px; }
+main #section-novedades button {
+  font-size: 1.1em;
+  margin-bottom: 64px; }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -5,3 +5,19 @@
   box-sizing: border-box; 
   font-family: $body-font;
 }
+button{
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin: 20px auto;
+  padding:5px 10px ;
+  background-color:$button-color;
+  font-weight: bold;
+  &:hover{
+      background-image: linear-gradient(to right, $button-color, $bg-episodios-color);;
+      color: #fff;
+  }
+}
+h1, h2{
+  font-family: $title-font;
+}

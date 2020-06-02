@@ -1,0 +1,17 @@
+main{
+    #section-entrevistas{
+        h2{
+            margin-left: 15px;
+            font-size: 2.3em;
+            font-weight: lighter;
+        }
+        div{
+            display: flex;
+            flex-flow: row wrap;
+            img{
+                width: 100%;
+                margin-bottom: -1px;
+            }
+        }
+    }
+}
