@@ -1,5 +1,6 @@
 header {
-    #navegador{
+    #navegador {
+        display: flex;
         position: relative;
         min-height: 44px;
         img {
@@ -17,25 +18,25 @@ header {
             right: 0;
             opacity: 0;
             z-index: 10;
-            width: 30px; 
+            width: 30px;
             height: 30px;
             cursor: pointer;
-            &:checked ~ nav{ 
+            &:checked ~ nav {
                 display: block;
             }
-            &:checked ~ #cruz{
+            &:checked ~ #cruz {
                 opacity: 1;
                 z-index: 4;
             }
-            &:checked ~ #barras{
-                opacity: 0; 
+            &:checked ~ #barras {
+                opacity: 0;
             }
         }
         i {
             position: absolute;
             top: 15px;
             right: 10px;
-            transform: scale(1.2);
+            font-size: 1.3em;
         }
         nav {
             position: absolute;
@@ -43,46 +44,72 @@ header {
             width: 100%;
             display: none;
             background-color: $bg-episodios-color;
-            li {
-                margin: 20px 20px;
-                list-style-type: none;
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                    &:hover{
-                        color: $button-color;
-                        text-decoration: line-through;
-                    }
-                    &:active{
-                        color: #444;
+            /*@media (min-width: $breackpoint) {
+                top: 0;
+                position: relative;
+                display: inline-block;
+                background-color: #fff;
+            }*/
+            ul {
+                /*@media (min-width: $breackpoint) {
+                    display: inline-block;
+                }*/
+                li {
+                    margin: 20px 20px;
+                    list-style-type: none;
+                    /*@media (min-width: $breackpoint) {
+                        display: inline-block;
+                    }*/
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        /*@media (min-width: $breackpoint) {
+                            color: #000;
+                        }*/
+                        &:hover {
+                            color: $button-color;
+                            text-decoration: line-through;
+                        }
+                        &:active {
+                            color: #444;
+                        }
                     }
                 }
-            }    
+            }
         }
+        /*#checkbox,
+        #cruz,
+        #barras {
+            @media (min-width: $breackpoint) {
+                display: none;
+            }
+        }*/
     }
-    h1{
-        margin-top:30px ;
+    h1 {
+        margin-top: 30px;
         font-weight: lighter;
         font-size: 2.3em;
-        & span:last-child{
+        & span:nth-child(2) {
             text-decoration: line-through;
         }
-    }
-    h2{
-        font-size: 2.3em;
-        font-weight: lighter;
-        &::after{
+        & span:last-child{
+            display: block;
+            @media (min-width: $breackpoint) {
+                display: inline-block;
+            }
+        }
+        & span:last-child::after {
             content: ".";
             color: $bg-episodios-color;
         }
     }
-    p{
-        margin-top:15px;
+    p {
+        margin-top: 15px;
     }
-    .titulo{
+    .titulo {
         margin-left: 15px;
     }
-    button{
+    button {
         font-size: 1.3em;
     }
 }

@@ -20,7 +20,13 @@ button{
       background-image: linear-gradient(to right, $button-color, $bg-episodios-color);;
       color: #fff;
   }
+  @media  (min-width:$breackpoint){
+    width: 20%;
+  }
 }
-h1, h2{
+h1 span, h2{
   font-family: $title-font;
+  @media  (min-width:$breackpoint){
+    font-size: 1.5em;
+  }
 }

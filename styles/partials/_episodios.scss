@@ -1,18 +1,14 @@
 main {
     #section-episodios {
-        margin: 50px 0;
-        transform: skewY(-6deg);
+        margin: 40px 0;
         background-color: $bg-episodios-color;
-        -webkit-transform: skewY(-6deg);
-        -moz-transform: skewY(-6deg);
-        -ms-transform: skewY(-6deg);
-        -o-transform: skewY(-6deg);
+        clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 5%);    
+        padding: 50px 0;
+        @media  (min-width:$breackpoint){
+            padding: 100px 0;
+            clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);    
+        }
         div{
-            transform: skewY(6deg);
-            -webkit-transform: skewY(6deg);
-            -moz-transform: skewY(6deg);
-            -ms-transform: skewY(6deg);
-            -o-transform: skewY(6deg);
             h2 {
                 margin: 0px 0px 10px 10px;
                 padding-top: 40px;
@@ -27,6 +23,9 @@ main {
                 justify-content: center;
                 iframe {
                     margin: 10px;
+                    @media  (min-width:$breackpoint){
+                        width: 40%;
+                    }
                 }
             }
         }

@@ -2,21 +2,21 @@ main {
     #section-novedades {
         margin-top: 40px;
         background-color: $bg-episodios-color;
-        transform: skewY(-6deg);
-        -webkit-transform: skewY(-6deg);
-        -moz-transform: skewY(-6deg);
-        -ms-transform: skewY(-6deg);
-        -o-transform: skewY(-6deg);
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 10%);
+        @media (min-width: $breackpoint) {
+            margin-top: 80px;
+            clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 30%);
+            padding-top: 60px;
+        }
         article {
             padding: 5px;
             text-align: center;
-            transform: skewY(6deg);
-            -webkit-transform: skewY(6deg);
-            -moz-transform: skewY(6deg);
-            -ms-transform: skewY(6deg);
-            -o-transform: skewY(6deg);
+            @media (min-width: $breackpoint) {
+                padding: 80px 0;
+            }
             h2 {
-                margin: 40px 0px 40px 10px;
+                font-size: 2.3em;
+                margin: 40px 0px;
                 color: #fff;
             }
             button {

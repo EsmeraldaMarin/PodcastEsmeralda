@@ -22,13 +22,27 @@ button {
   button:hover {
     background-image: linear-gradient(to right, #00F3BB, #0000ec);
     color: #fff; }
+  @media (min-width: 768px) {
+    button {
+      width: 20%; } }
 
-h1, h2 {
+h1 span, h2 {
   font-family: "Poppins", sans-serif; }
+  @media (min-width: 768px) {
+    h1 span, h2 {
+      font-size: 1.5em; } }
 
 header #navegador {
+  display: flex;
   position: relative;
-  min-height: 44px; }
+  min-height: 44px;
+  /*#checkbox,
+  #cruz,
+  #barras {
+      @media (min-width: $breackpoint) {
+          display: none;
+      }
+  }*/ }
   header #navegador img {
     position: absolute;
     top: 10px;
@@ -56,34 +70,52 @@ header #navegador {
     position: absolute;
     top: 15px;
     right: 10px;
-    transform: scale(1.2); }
+    font-size: 1.3em; }
   header #navegador nav {
     position: absolute;
     top: 44px;
     width: 100%;
     display: none;
-    background-color: #0000ec; }
-    header #navegador nav li {
-      margin: 20px 20px;
-      list-style-type: none; }
-      header #navegador nav li a {
-        text-decoration: none;
-        color: #fff; }
-        header #navegador nav li a:hover {
-          color: #00F3BB;
-          text-decoration: line-through; }
-        header #navegador nav li a:active {
-          color: #444; }
+    background-color: #0000ec;
+    /*@media (min-width: $breackpoint) {
+        top: 0;
+        position: relative;
+        display: inline-block;
+        background-color: #fff;
+    }*/ }
+    header #navegador nav ul {
+      /*@media (min-width: $breackpoint) {
+          display: inline-block;
+      }*/ }
+      header #navegador nav ul li {
+        margin: 20px 20px;
+        list-style-type: none;
+        /*@media (min-width: $breackpoint) {
+            display: inline-block;
+        }*/ }
+        header #navegador nav ul li a {
+          text-decoration: none;
+          color: #fff;
+          /*@media (min-width: $breackpoint) {
+              color: #000;
+          }*/ }
+          header #navegador nav ul li a:hover {
+            color: #00F3BB;
+            text-decoration: line-through; }
+          header #navegador nav ul li a:active {
+            color: #444; }
 header h1 {
   margin-top: 30px;
   font-weight: lighter;
   font-size: 2.3em; }
-  header h1 span:last-child {
+  header h1 span:nth-child(2) {
     text-decoration: line-through; }
-header h2 {
-  font-size: 2.3em;
-  font-weight: lighter; }
-  header h2::after {
+  header h1 span:last-child {
+    display: block; }
+    @media (min-width: 768px) {
+      header h1 span:last-child {
+        display: inline-block; } }
+  header h1 span:last-child::after {
     content: ".";
     color: #0000ec; }
 header p {
@@ -94,47 +126,57 @@ header button {
   font-size: 1.3em; }
 
 main #section-episodios {
-  margin: 50px 0;
-  transform: skewY(-6deg);
+  margin: 40px 0;
   background-color: #0000ec;
-  -webkit-transform: skewY(-6deg);
-  -moz-transform: skewY(-6deg);
-  -ms-transform: skewY(-6deg);
-  -o-transform: skewY(-6deg); }
-  main #section-episodios div {
-    transform: skewY(6deg);
-    -webkit-transform: skewY(6deg);
-    -moz-transform: skewY(6deg);
-    -ms-transform: skewY(6deg);
-    -o-transform: skewY(6deg); }
-    main #section-episodios div h2 {
-      margin: 0px 0px 10px 10px;
-      padding-top: 40px;
-      font-size: 2.3em;
-      font-weight: lighter;
-      color: #fff; }
-    main #section-episodios div article {
-      display: flex;
-      padding-bottom: 70px;
-      flex-flow: row wrap;
-      justify-content: center; }
-      main #section-episodios div article iframe {
-        margin: 10px; }
+  clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 5%);
+  padding: 50px 0; }
+  @media (min-width: 768px) {
+    main #section-episodios {
+      padding: 100px 0;
+      clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%); } }
+  main #section-episodios div h2 {
+    margin: 0px 0px 10px 10px;
+    padding-top: 40px;
+    font-size: 2.3em;
+    font-weight: lighter;
+    color: #fff; }
+  main #section-episodios div article {
+    display: flex;
+    padding-bottom: 70px;
+    flex-flow: row wrap;
+    justify-content: center; }
+    main #section-episodios div article iframe {
+      margin: 10px; }
+      @media (min-width: 768px) {
+        main #section-episodios div article iframe {
+          width: 40%; } }
 
 main #section-nosotros {
-  margin: 15px; }
-  main #section-nosotros #section-phone {
-    position: relative;
-    margin-top: -100px;
-    z-index: 100; }
-    main #section-nosotros #section-phone img {
+  margin-top: -120px;
+  z-index: 100;
+  margin-bottom: 15px;
+  display: flex;
+  flex-flow: row wrap; }
+  @media (min-width: 768px) {
+    main #section-nosotros {
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: center; } }
+  main #section-nosotros #article-phone {
+    position: relative; }
+    main #section-nosotros #article-phone img {
       width: 100%; }
+  main #section-nosotros #article-texto {
+    padding: 0 15px; }
   main #section-nosotros h2 {
     margin-bottom: 10px;
     font-size: 2.3em;
     font-weight: lighter; }
   main #section-nosotros p {
     margin-top: 10px; }
+  @media (min-width: 768px) {
+    main #section-nosotros article {
+      width: 25%; } }
 
 main #section-entrevistas h2 {
   margin-left: 15px;
@@ -146,6 +188,9 @@ main #section-entrevistas div {
   main #section-entrevistas div img {
     width: 100%;
     margin-bottom: -1px; }
+    @media (min-width: 768px) {
+      main #section-entrevistas div img {
+        width: 33.333%; } }
 
 main #section-topicos h2 {
   margin: 20px 15px;
@@ -165,34 +210,36 @@ main #section-topicos article {
 main #section-novedades {
   margin-top: 40px;
   background-color: #0000ec;
-  transform: skewY(-6deg);
-  -webkit-transform: skewY(-6deg);
-  -moz-transform: skewY(-6deg);
-  -ms-transform: skewY(-6deg);
-  -o-transform: skewY(-6deg); }
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 10%); }
+  @media (min-width: 768px) {
+    main #section-novedades {
+      margin-top: 80px;
+      clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 30%);
+      padding-top: 60px; } }
   main #section-novedades article {
     padding: 5px;
-    text-align: center;
-    transform: skewY(6deg);
-    -webkit-transform: skewY(6deg);
-    -moz-transform: skewY(6deg);
-    -ms-transform: skewY(6deg);
-    -o-transform: skewY(6deg); }
+    text-align: center; }
+    @media (min-width: 768px) {
+      main #section-novedades article {
+        padding: 80px 0; } }
     main #section-novedades article h2 {
-      margin: 40px 0px 40px 10px;
+      font-size: 2.3em;
+      margin: 40px 0px;
       color: #fff; }
     main #section-novedades article button {
       font-size: 1.1em;
       margin-bottom: 64px; }
 
 footer {
-  margin-top: -25px;
   position: relative;
   background-color: #fff;
-  z-index: 100;
   display: flex;
   flex-flow: row wrap;
   justify-content: center; }
+  @media (min-width: 768px) {
+    footer {
+      justify-content: space-between;
+      padding: 20px 100px; } }
   footer span {
     margin-top: 20px; }
   footer ul {
@@ -206,5 +253,7 @@ footer {
         text-decoration: none; }
         footer ul li a i {
           color: #000; }
+          footer ul li a i:hover {
+            color: #00F3BB; }
 
 /*# sourceMappingURL=estilos.css.map */

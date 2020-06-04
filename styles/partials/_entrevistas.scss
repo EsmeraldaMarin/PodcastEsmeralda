@@ -11,6 +11,9 @@ main{
             img{
                 width: 100%;
                 margin-bottom: -1px;
+                @media  (min-width:$breackpoint){
+                    width: 33.333%;
+                }
             }
         }
     }
