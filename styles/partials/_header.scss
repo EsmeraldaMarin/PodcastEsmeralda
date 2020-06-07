@@ -1,12 +1,26 @@
 header {
     #navegador {
-        display: flex;
         position: relative;
+        top: 0;
         min-height: 44px;
+        z-index: 1000;
+        background-color: #fff;
+        @media (min-width: $breackpoint) {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-items: space-between;
+            align-items: center;
+        }
         img {
             position: absolute;
             top: 10px;
             left: 10px;
+            @media (min-width: $breackpoint) {
+                margin-left: 10px;
+                position: static;
+            }
         }
         #cruz {
             position: absolute;
@@ -44,28 +58,29 @@ header {
             width: 100%;
             display: none;
             background-color: $bg-episodios-color;
-            /*@media (min-width: $breackpoint) {
-                top: 0;
-                position: relative;
+            @media (min-width: $breackpoint) {
+                position: static;
                 display: inline-block;
                 background-color: #fff;
-            }*/
+            }
             ul {
-                /*@media (min-width: $breackpoint) {
-                    display: inline-block;
-                }*/
+                @media (min-width: $breackpoint) {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
                 li {
                     margin: 20px 20px;
                     list-style-type: none;
-                    /*@media (min-width: $breackpoint) {
+                    @media (min-width: $breackpoint) {
                         display: inline-block;
-                    }*/
+                    }
                     a {
                         text-decoration: none;
                         color: #fff;
-                        /*@media (min-width: $breackpoint) {
+                        @media (min-width: $breackpoint) {
                             color: #000;
-                        }*/
+                        }
                         &:hover {
                             color: $button-color;
                             text-decoration: line-through;
@@ -77,22 +92,33 @@ header {
                 }
             }
         }
-        /*#checkbox,
+        #checkbox,
         #cruz,
         #barras {
             @media (min-width: $breackpoint) {
                 display: none;
             }
-        }*/
+        }
     }
     h1 {
         margin-top: 30px;
+        margin-left: 15px;
         font-weight: lighter;
         font-size: 2.3em;
+        @media (min-width: $breackpoint) {
+            margin-left: 200px;
+            margin-top: 80px;
+        }
+        span {
+            font-family: $title-font;
+            @media (min-width: $breackpoint) {
+                font-size: 1.5em;
+            }
+        }
         & span:nth-child(2) {
             text-decoration: line-through;
         }
-        & span:last-child{
+        & span:last-child {
             display: block;
             @media (min-width: $breackpoint) {
                 display: inline-block;
@@ -105,11 +131,17 @@ header {
     }
     p {
         margin-top: 15px;
-    }
-    .titulo {
         margin-left: 15px;
+        @media (min-width: $breackpoint) {
+            width: 35%;
+            margin-left: 200px;
+        }
     }
     button {
         font-size: 1.3em;
+        @media (min-width: $breackpoint) {
+            margin-top: 50px;
+            margin-left: 200px;
+        }
     }
 }

@@ -26,27 +26,28 @@ button {
     button {
       width: 20%; } }
 
-h1 span, h2 {
-  font-family: "Poppins", sans-serif; }
-  @media (min-width: 768px) {
-    h1 span, h2 {
-      font-size: 1.5em; } }
-
 header #navegador {
-  display: flex;
   position: relative;
+  top: 0;
   min-height: 44px;
-  /*#checkbox,
-  #cruz,
-  #barras {
-      @media (min-width: $breackpoint) {
-          display: none;
-      }
-  }*/ }
+  z-index: 1000;
+  background-color: #fff; }
+  @media (min-width: 768px) {
+    header #navegador {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-items: space-between;
+      align-items: center; } }
   header #navegador img {
     position: absolute;
     top: 10px;
     left: 10px; }
+    @media (min-width: 768px) {
+      header #navegador img {
+        margin-left: 10px;
+        position: static; } }
   header #navegador #cruz {
     position: absolute;
     opacity: 0; }
@@ -76,38 +77,53 @@ header #navegador {
     top: 44px;
     width: 100%;
     display: none;
-    background-color: #0000ec;
-    /*@media (min-width: $breackpoint) {
-        top: 0;
-        position: relative;
+    background-color: #0000ec; }
+    @media (min-width: 768px) {
+      header #navegador nav {
+        position: static;
         display: inline-block;
-        background-color: #fff;
-    }*/ }
-    header #navegador nav ul {
-      /*@media (min-width: $breackpoint) {
-          display: inline-block;
-      }*/ }
-      header #navegador nav ul li {
-        margin: 20px 20px;
-        list-style-type: none;
-        /*@media (min-width: $breackpoint) {
-            display: inline-block;
-        }*/ }
-        header #navegador nav ul li a {
-          text-decoration: none;
-          color: #fff;
-          /*@media (min-width: $breackpoint) {
-              color: #000;
-          }*/ }
-          header #navegador nav ul li a:hover {
-            color: #00F3BB;
-            text-decoration: line-through; }
-          header #navegador nav ul li a:active {
-            color: #444; }
+        background-color: #fff; } }
+    @media (min-width: 768px) {
+      header #navegador nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; } }
+    header #navegador nav ul li {
+      margin: 20px 20px;
+      list-style-type: none; }
+      @media (min-width: 768px) {
+        header #navegador nav ul li {
+          display: inline-block; } }
+      header #navegador nav ul li a {
+        text-decoration: none;
+        color: #fff; }
+        @media (min-width: 768px) {
+          header #navegador nav ul li a {
+            color: #000; } }
+        header #navegador nav ul li a:hover {
+          color: #00F3BB;
+          text-decoration: line-through; }
+        header #navegador nav ul li a:active {
+          color: #444; }
+  @media (min-width: 768px) {
+    header #navegador #checkbox,
+    header #navegador #cruz,
+    header #navegador #barras {
+      display: none; } }
 header h1 {
   margin-top: 30px;
+  margin-left: 15px;
   font-weight: lighter;
   font-size: 2.3em; }
+  @media (min-width: 768px) {
+    header h1 {
+      margin-left: 200px;
+      margin-top: 80px; } }
+  header h1 span {
+    font-family: "Poppins", sans-serif; }
+    @media (min-width: 768px) {
+      header h1 span {
+        font-size: 1.5em; } }
   header h1 span:nth-child(2) {
     text-decoration: line-through; }
   header h1 span:last-child {
@@ -119,11 +135,18 @@ header h1 {
     content: ".";
     color: #0000ec; }
 header p {
-  margin-top: 15px; }
-header .titulo {
+  margin-top: 15px;
   margin-left: 15px; }
+  @media (min-width: 768px) {
+    header p {
+      width: 35%;
+      margin-left: 200px; } }
 header button {
   font-size: 1.3em; }
+  @media (min-width: 768px) {
+    header button {
+      margin-top: 50px;
+      margin-left: 200px; } }
 
 main #section-episodios {
   margin: 40px 0;
@@ -140,6 +163,10 @@ main #section-episodios {
     font-size: 2.3em;
     font-weight: lighter;
     color: #fff; }
+    @media (min-width: 768px) {
+      main #section-episodios div h2 {
+        margin-left: 200px;
+        margin-bottom: 30px; } }
   main #section-episodios div article {
     display: flex;
     padding-bottom: 70px;
@@ -172,6 +199,9 @@ main #section-nosotros {
     margin-bottom: 10px;
     font-size: 2.3em;
     font-weight: lighter; }
+    @media (min-width: 768px) {
+      main #section-nosotros h2 {
+        margin-bottom: 30px; } }
   main #section-nosotros p {
     margin-top: 10px; }
   @media (min-width: 768px) {
@@ -182,6 +212,9 @@ main #section-entrevistas h2 {
   margin-left: 15px;
   font-size: 2.3em;
   font-weight: lighter; }
+  @media (min-width: 768px) {
+    main #section-entrevistas h2 {
+      margin: 50px 200px; } }
 main #section-entrevistas div {
   display: flex;
   flex-flow: row wrap; }
@@ -196,16 +229,26 @@ main #section-topicos h2 {
   margin: 20px 15px;
   font-size: 2.3em;
   font-weight: lighter; }
+  @media (min-width: 768px) {
+    main #section-topicos h2 {
+      margin: 50px 200px; } }
 main #section-topicos article {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   text-align: center; }
   main #section-topicos article div {
-    margin: 15px 20px; }
+    margin: 15px 20px;
+    font-weight: lighter; }
+    @media (min-width: 768px) {
+      main #section-topicos article div {
+        margin: 0px 30px; } }
     main #section-topicos article div h3 {
+      width: 200px;
+      margin-top: 20px;
       font-size: 1.3em;
-      font-family: "Lato", sans-serif; }
+      font-family: "Lato", sans-serif;
+      font-weight: lighter; }
 
 main #section-novedades {
   margin-top: 40px;
@@ -213,7 +256,7 @@ main #section-novedades {
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 10%); }
   @media (min-width: 768px) {
     main #section-novedades {
-      margin-top: 80px;
+      margin-top: 60px;
       clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 30%);
       padding-top: 60px; } }
   main #section-novedades article {
@@ -223,9 +266,12 @@ main #section-novedades {
       main #section-novedades article {
         padding: 80px 0; } }
     main #section-novedades article h2 {
-      font-size: 2.3em;
+      font-size: 1.7em;
       margin: 40px 0px;
       color: #fff; }
+      @media (min-width: 768px) {
+        main #section-novedades article h2 {
+          font-size: 2.3em; } }
     main #section-novedades article button {
       font-size: 1.1em;
       margin-bottom: 64px; }

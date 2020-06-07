@@ -4,6 +4,9 @@ main{
             margin-left: 15px;
             font-size: 2.3em;
             font-weight: lighter;
+            @media (min-width: $breackpoint) {
+                margin: 50px 200px;
+            }
         }
         div{
             display: flex;
