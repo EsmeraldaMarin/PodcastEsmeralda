@@ -2,25 +2,39 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: $body-font;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-button{
+a{
+  text-decoration: none;
+}
+button {
   display: block;
   width: 90%;
   height: 50px;
   margin: 20px auto;
-  padding:5px 10px ;
-  background-color:$button-color;
+  padding: 5px 10px;
+  background-color: $button-color;
   font-weight: bold;
-  &:hover{
-      background-image: linear-gradient(to right, $button-color, $bg-episodios-color);;
-      color: #fff;
+  &:hover {
+    background-image: linear-gradient(to right, $button-color, $bg-episodios-color);
+    color: #fff;
+    @media (min-width: $breackpoint) {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+    }
   }
-  @media  (min-width:$breackpoint){
-    width: 20%;
+  @media (min-width: $breackpoint) {
+    width: 250px;
   }
+}
+
+h2 {
+  font-family: $title-font;
 }

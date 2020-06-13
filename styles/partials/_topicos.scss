@@ -1,6 +1,6 @@
-main{
-    #section-topicos{
-        h2{
+main {
+    #section-topicos {
+        h2 {
             margin: 20px 15px;
             font-size: 2.3em;
             font-weight: lighter;
@@ -8,18 +8,22 @@ main{
                 margin: 50px 200px;
             }
         }
-        article{
+        article {
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
             text-align: center;
-            div{
+            div {
                 margin: 15px 20px;
                 font-weight: lighter;
                 @media (min-width: $breackpoint) {
-                    margin:0px 30px;
+                    margin: 20px 20px;
                 }
-                h3{
+                @media (max-width: $breackpoint) {
+                    margin: 10px 50px;
+                }
+
+                h3 {
                     width: 200px;
                     margin: 20px 0px 30px 0px;
                     font-size: 1.3em;

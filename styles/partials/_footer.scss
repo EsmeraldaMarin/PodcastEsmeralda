@@ -1,12 +1,12 @@
 footer{
     position: relative;
-    background-color: #fff;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    background-color: #fff;
     @media  (min-width:$breackpoint){
-        justify-content: space-between;
         padding: 20px 100px;
+        justify-content: space-between;
     }
     span{
         margin-top: 20px;
@@ -24,6 +24,9 @@ footer{
                     color: #000;
                     &:hover{
                         color: $button-color;
+                    }
+                    &:active{
+                        color: #777;
                     }
                 }
             }

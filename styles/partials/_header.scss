@@ -1,13 +1,13 @@
 header {
     #navegador {
+        min-height: 44px;
         position: relative;
         top: 0;
-        min-height: 44px;
         z-index: 1000;
-        background-color: #fff;
+        background-color: rgba($color: #fff, $alpha: .9);
         @media (min-width: $breackpoint) {
-            position: fixed;
             width: 100%;
+            position: fixed;
             display: flex;
             flex-direction: row;
             justify-items: space-between;
@@ -18,7 +18,8 @@ header {
             top: 10px;
             left: 10px;
             @media (min-width: $breackpoint) {
-                margin-left: 10px;
+                width: 40px;
+                margin: 10px 50px;
                 position: static;
             }
         }
@@ -27,13 +28,13 @@ header {
             opacity: 0;
         }
         #checkbox {
+            width: 30px;
+            height: 30px;
             position: absolute;
             top: 10px;
             right: 0;
             opacity: 0;
             z-index: 10;
-            width: 30px;
-            height: 30px;
             cursor: pointer;
             &:checked ~ nav {
                 display: block;
@@ -53,15 +54,16 @@ header {
             font-size: 1.3em;
         }
         nav {
+            width: 100%;
             position: absolute;
             top: 44px;
-            width: 100%;
             display: none;
             background-color: $bg-episodios-color;
             @media (min-width: $breackpoint) {
+                margin: 10px 25px;
                 position: static;
                 display: inline-block;
-                background-color: #fff;
+                background-color: rgba($color: #fff, $alpha: 0);
             }
             ul {
                 @media (min-width: $breackpoint) {
@@ -86,7 +88,7 @@ header {
                             text-decoration: line-through;
                         }
                         &:active {
-                            color: #444;
+                            color: #777;
                         }
                     }
                 }

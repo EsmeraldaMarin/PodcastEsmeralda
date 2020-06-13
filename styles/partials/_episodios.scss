@@ -1,9 +1,9 @@
 main {
     #section-episodios {
         margin: 40px 0;
-        background-color: $bg-episodios-color;
-        clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 5%);    
         padding: 50px 0;
+        clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 5%);    
+        background-color: $bg-episodios-color;
         @media  (min-width:$breackpoint){
             padding: 100px 0;
             clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);    
@@ -21,8 +21,8 @@ main {
                 }
             }
             article {
-                display: flex;
                 padding-bottom: 70px;
+                display: flex;
                 flex-flow: row wrap;
                 justify-content: center;
                 iframe {
