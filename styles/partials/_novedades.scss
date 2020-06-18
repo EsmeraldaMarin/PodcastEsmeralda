@@ -2,7 +2,7 @@ main {
     #section-novedades {
         margin-top: 40px;
         clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 10%);
-        background-color: $bg-episodios-color;
+        background-image: linear-gradient($bg-episodios-color, $bg-episodios-color, $bg-episodios-color, $bg-episodios-color-2);
         @media (min-width: $breackpoint) {
             margin-top: 0;
             padding-top: 60px;

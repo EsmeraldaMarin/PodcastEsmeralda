@@ -4,7 +4,8 @@ header {
         position: relative;
         top: 0;
         z-index: 1000;
-        background-color: rgba($color: #fff, $alpha: .9);
+        border-bottom: 1px solid #eee;
+        background-color: rgba($color: #fff, $alpha: 1);
         @media (min-width: $breackpoint) {
             width: 100%;
             position: fixed;

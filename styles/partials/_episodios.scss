@@ -3,7 +3,7 @@ main {
         margin: 40px 0;
         padding: 50px 0;
         clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 5%);    
-        background-color: $bg-episodios-color;
+        background-image: linear-gradient($bg-episodios-color, $bg-episodios-color-2);
         @media  (min-width:$breackpoint){
             padding: 100px 0;
             clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 15%);    

@@ -54,7 +54,8 @@ header #navegador {
   position: relative;
   top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #eee;
+  background-color: white;
 }
 @media (min-width: 768px) {
   header #navegador {
@@ -221,7 +222,7 @@ main #section-episodios {
   margin: 40px 0;
   padding: 50px 0;
   clip-path: polygon(100% 0%, 100% 95%, 0% 100%, 0% 5%);
-  background-color: #cc0e74;
+  background-image: linear-gradient(#cc0e74, #810346);
 }
 @media (min-width: 768px) {
   main #section-episodios {
@@ -379,7 +380,7 @@ main #section-topicos article div h3 {
 main #section-novedades {
   margin-top: 40px;
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 10%);
-  background-color: #cc0e74;
+  background-image: linear-gradient(#cc0e74, #cc0e74, #cc0e74, #810346);
 }
 @media (min-width: 768px) {
   main #section-novedades {
