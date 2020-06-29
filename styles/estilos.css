@@ -12,7 +12,10 @@
 html {
   scroll-behavior: smooth;
 }
-
+body>div>a>img{
+  display: none !important;
+  /*para quitar la marca de agua de webhost*/
+}
 a {
   text-decoration: none;
 }
